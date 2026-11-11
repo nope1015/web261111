@@ -65,15 +65,19 @@ function renderCards(list) {
             card.classList.add("hot");
         }
         card.innerHTML = `
- <img class="poster" src="${posterUrl(m.poster, "w342")}" alt="${m.title} 포스터">
- <span class="badge">${m.rating}</span>
- <div class="info">
-    <h2>${m.title}</h2>
-    <p class="year">${m.year}</p>
- </div>`;
+    <img class="poster" src="${posterUrl(m.poster, "w342")}" alt="${m.title} 포스터">
+    <span class="badge">${m.rating}</span>
+    <div class="info">
+        <h2>${m.title}</h2>
+        <p class="year">${m.year}</p>
+    </div>`;
         board.appendChild(card);
+    }
 
-        document.querySelector("#count").textContent = list.length + "편";
+    // #count 요소가 화면에 존재하는 경우에만 텍스트를 채우도록 수정
+    const countEl = document.querySelector("#count");
+    if (countEl) {
+        countEl.textContent = list.length + "편";
     }
 }
 // sortBy : 영화 배열, 키 이름, 내림차순 여부 ⇒ 정렬한 새 배열(원본은 그대로)
