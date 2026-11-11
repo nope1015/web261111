@@ -72,12 +72,8 @@ function renderCards(list) {
         <p class="year">${m.year}</p>
     </div>`;
         board.appendChild(card);
-    }
 
-    // #count 요소가 화면에 존재하는 경우에만 텍스트를 채우도록 수정
-    const countEl = document.querySelector("#count");
-    if (countEl) {
-        countEl.textContent = list.length + "편";
+        document.querySelector("#count").textContent = list.length + "편";
     }
 }
 // sortBy : 영화 배열, 키 이름, 내림차순 여부 ⇒ 정렬한 새 배열(원본은 그대로)
@@ -95,4 +91,4 @@ function applySort() {
     const key = document.getElementById("sort").value;
     renderCards(sortBy(movies, key, key !== "title"));
 }
-renderCards(movies);
+applySort();
