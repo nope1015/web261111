@@ -22,4 +22,8 @@ const movies = [
         title: "라이언 일병 구하기", year: 1998, date: "1998/07/24",
         rating: 8.2, poster: "/9W0XUvNtoJMG6kI4F4Y2mbsS2kt.jpg"
     },
+    {
+        title: "암살자(들)", year: 2026, date: "2026/09/23",
+        rating: 7.2, poster: "/c55ijsOdntj6P25vDwHLdgsBpmV.jpg "
+    },
 ];
